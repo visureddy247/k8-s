@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mavenwebappcontainer
-        image: dockerhandson/maven-web-app
+        image: visureddy247/maven-web-app
         ports:
         - containerPort: 8080
 
