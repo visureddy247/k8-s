@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: mavenwebapprs
+spec:
+  replicas: 2
+  selector:
+    app: mavenwebapp
+  template:
+    metadata:
+      name: mavenwebapppod
+      labels:
+        app: mavenwebapp
+    spec:
+      containers:
+      - name: mavenwebappcontainer
+        image: visureddy247/maven-web-app
+        ports:
+        - containerPort: 8080
